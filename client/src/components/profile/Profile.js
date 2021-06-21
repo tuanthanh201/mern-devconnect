@@ -200,7 +200,7 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
           </div>
         </>
       )}
-      {profile === null && <p>You don't have a profile</p>}
+      {profile === null && <p>Profile not found</p>}
     </>
   );
 };
