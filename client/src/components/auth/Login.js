@@ -24,9 +24,10 @@ const Login = ({ login, isAuthenticated }) => {
       <p className="lead">
         <i className="fas fa-user"></i> Sign Into Your Account
       </p>
-      <form className="form" autoComplete="off" spellCheck="off" onSubmit={submitHandler}>
+      <form className="form" autoComplete="off" onSubmit={submitHandler}>
         <div className="form-group">
           <input
+            spellCheck="off"
             type="email"
             placeholder="Email Address"
             name="email"

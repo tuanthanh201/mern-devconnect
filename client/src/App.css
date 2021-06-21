@@ -492,8 +492,8 @@ button {
   border-bottom: solid var(--primary-color) 2px;
 }
 
-.text-error {
-  color: red;
+.liked-post {
+  color: var(--primary-color);
 }
 
 /* Mobile Styles */

@@ -87,7 +87,7 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
 
   return (
     <>
-      {(loading || profile === null) && <Spinner />}
+      {loading && <Spinner />}
       {!loading && profile !== null && (
         <>
           <Link to="/profiles" className="btn btn-light">
@@ -200,6 +200,7 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth }) => {
           </div>
         </>
       )}
+      {profile === null && <p>You don't have a profile</p>}
     </>
   );
 };

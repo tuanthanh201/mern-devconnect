@@ -34,9 +34,10 @@ const Register = (props) => {
       <p className="lead">
         <i className="fas fa-user"></i> Create Your Account
       </p>
-      <form className="form" autoComplete="off" spellCheck="off" onSubmit={submitHandler}>
+      <form className="form" autoComplete="off" onSubmit={submitHandler}>
         <div className="form-group">
           <input
+            spellCheck="off"
             type="text"
             placeholder="Name"
             name="name"
@@ -46,6 +47,7 @@ const Register = (props) => {
         </div>
         <div className="form-group">
           <input
+            spellCheck="off"
             type="email"
             placeholder="Email Address"
             name="email"
