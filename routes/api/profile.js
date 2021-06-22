@@ -196,7 +196,7 @@ router.delete("/experience/:exp_id", auth, async (req, res) => {
     const profile = await Profile.findOne({ user: req.user.id });
 
     profile.experience = profile.experience.filter(
-      (exp) => exp._id != req.params.exp_id
+      (exp) => exp._id.toString() !== req.params.exp_id
     );
     await profile.save();
     res.json(profile);
@@ -244,7 +244,7 @@ router.put(
 );
 
 // @route    DELETE api/profile/experience/:edu_id
-// @desc     Delete profile experience
+// @desc     Delete profile education
 // @access   Private
 router.delete("/education/:edu_id", auth, async (req, res) => {
   try {
